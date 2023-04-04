@@ -16,6 +16,8 @@ import model.Accessor;
 import model.Presentation;
 import model.XMLAccessor;
 
+import model.Presentation;
+
 public class MenuController extends MenuBar {
 
   private static final long serialVersionUID = 227L;

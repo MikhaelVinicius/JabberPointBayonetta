@@ -1,6 +1,7 @@
 package br.upe.ppsw.jabberpoint;
 
 import java.io.IOException;
+
 import javax.swing.JOptionPane;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.WebApplicationType;
@@ -12,6 +13,10 @@ import View.Style;
 import model.Accessor;
 import model.Presentation;
 import model.XMLAccessor;
+
+import model.Presentation;
+
+import View.SlideViewerFrame;
 
 @SpringBootApplication
 public class JabberPointApplication implements CommandLineRunner {
