@@ -1,9 +1,11 @@
-package br.upe.ppsw.jabberpoint.apresentacao;
+package View;
 
 import java.awt.Dimension;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
 import javax.swing.JFrame;
+
+import Controller.MenuController;
 
 public class SlideViewerFrame extends JFrame {
 
