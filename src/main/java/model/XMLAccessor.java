@@ -10,8 +10,8 @@ import org.w3c.dom.NodeList;
 import org.xml.sax.SAXException;
 
 import View.BitmapItem;
-import View.Presentation;
-import View.Slide;
+import model.Presentation;
+import model.Slide;
 import View.SlideItem;
 import View.TextItem;
 

@@ -4,7 +4,7 @@ import View.BitmapItem;
 import View.SlideItem;
 import View.TextItem;
 
-public class SlideItemFactory {
+public class SlideItensCriador {
   
   public SlideItem createSlideItem(String kind, int level, String text) {
     if (kind.equals("text")) {
