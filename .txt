@@ -1,0 +1,5 @@
+O que fiz ate agora
+
+-Implementei os diretorios dentro do MVC
+- Separei a classe XMLAcessor em duas respeitando o primeiro principio do SOLID. No caso a novas classes seriam XMLAcessor onde só é responsavel por acessar os arquivos e SlideItemFactory que cria os itens
+- A classe Presentation não era totalmente fechada para modificações então criei uma classe chamada SlideContainer que implemneta a classe apresentation permitindo que outras implementações de armazenamento de slides fossem utilizadas sem a necessidade de alterar a classe Presentation.
