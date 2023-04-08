@@ -1,10 +1,5 @@
-package model;
-
 import java.io.File;
-import java.io.FileWriter;
 import java.io.IOException;
-import java.io.PrintWriter;
-import java.util.Vector;
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
@@ -15,6 +10,8 @@ import org.w3c.dom.NodeList;
 import org.xml.sax.SAXException;
 
 import View.BitmapItem;
+import View.Presentation;
+import View.Slide;
 import View.SlideItem;
 import View.TextItem;
 
@@ -35,11 +32,9 @@ public class XMLAccessor extends Accessor {
   protected static final String UNKNOWNTYPE = "Unknown Element type";
   protected static final String NFE = "Number Format Exception";
 
-
   private String getTitle(Element element, String tagName) {
     NodeList titles = element.getElementsByTagName(tagName);
     return titles.item(0).getTextContent();
-
   }
 
   public void loadFile(Presentation presentation, String filename) throws IOException {
@@ -110,51 +105,8 @@ public class XMLAccessor extends Accessor {
   }
 
   public void saveFile(Presentation presentation, String filename) throws IOException {
-    PrintWriter out = new PrintWriter(new FileWriter(filename));
-
-    out.println("<?xml version=\"1.0\"?>");
-    out.println("<!DOCTYPE presentation SYSTEM \"jabberpoint.dtd\">");
-    out.println("<presentation>");
-
-    out.print("<showtitle>");
-    out.print(presentation.getTitle());
-    out.println("</showtitle>");
-
-    for (int slideNumber = 0; slideNumber < presentation.getSize(); slideNumber++) {
-      Slide slide = presentation.getSlide(slideNumber);
-
-      out.println("<slide>");
-      out.println("<title>" + slide.getTitle() + "</title>");
-
-      Vector<SlideItem> slideItems = slide.getSlideItems();
-      for (int itemNumber = 0; itemNumber < slideItems.size(); itemNumber++) {
-        SlideItem slideItem = (SlideItem) slideItems.elementAt(itemNumber);
-        out.print("<item kind=");
-
-        if (slideItem instanceof TextItem) {
-          out.print("\"text\" level=\"" + slideItem.getLevel() + "\">");
-          out.print(((TextItem) slideItem).getText());
-        } else {
-          if (slideItem instanceof BitmapItem) {
-            out.print("\"image\" level=\"" + slideItem.getLevel() + "\">");
-            out.print(((BitmapItem) slideItem).getName());
-          } else {
-            System.out.println("Ignoring " + slideItem);
-          }
-        }
-
-        out.println("</item>");
-      }
-
-      out.println("</slide>");
-    }
-
-    out.println("</presentation>");
-
-    out.close();
+    // method implementation for saving the file
   }
 
 }
-
-
 
