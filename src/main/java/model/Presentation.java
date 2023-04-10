@@ -103,4 +103,3 @@ public class Presentation implements SlideContainer {
   }
 
 }
-

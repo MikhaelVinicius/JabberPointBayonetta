@@ -11,7 +11,7 @@ import javax.swing.JFrame;
 import model.Presentation;
 import model.Slide;
 
-public class SlideViewerComponent extends JComponent {
+public class SlideViewerComponent extends JComponent  {
   private static final long serialVersionUID = 227L;
 
   private static final Color BGCOLOR = Color.white;
