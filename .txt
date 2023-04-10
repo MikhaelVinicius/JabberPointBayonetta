@@ -5,3 +5,4 @@ O que fiz ate agora
 - A classe Presentation não era totalmente fechada para modificações então criei uma classe chamada SlideContainer que implemneta a classe apresentation permitindo que outras implementações de armazenamento de slides fossem utilizadas sem a necessidade de alterar a classe Presentation.
 -Implementei o principio de liskov no slideItem criando duas novas interfaces
 - Implementei interfaces na Classe TextItem a drawable e a bounded respeitando o principio 4
+-Principio 5 a classe presentation foi criada a interface sliderView. SlideViewerComponent deve implementar essa interface, de forma a se adequar à nova dependência. classe Presentation, por sua vez, deve ter uma dependência com a interface SlideViewer, e não mais com a classe SlideViewerComponent. 

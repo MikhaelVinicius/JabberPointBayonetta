@@ -1,3 +1,6 @@
+package model;
+
+
 import java.io.File;
 import java.io.IOException;
 import javax.xml.parsers.DocumentBuilder;
@@ -10,9 +13,7 @@ import org.w3c.dom.NodeList;
 import org.xml.sax.SAXException;
 
 import View.BitmapItem;
-import model.Presentation;
-import model.Slide;
-import View.SlideItem;
+
 import View.TextItem;
 
 public class XMLAccessor extends Accessor {
