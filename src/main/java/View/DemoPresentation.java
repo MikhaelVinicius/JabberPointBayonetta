@@ -17,11 +17,11 @@ public class DemoPresentation extends Accessor {
     Slide slide;
     slide = new Slide();
 
-    slide.setTitle("JabberPoint");
+    slide.setTitle("JabberPoint Bayonetta");
     slide.append(1, "Ferramenta de Apresentação de Slides");
     slide.append(2, "Copyright (c) 1996-now: Ian Darwin");
-    slide.append(2, "Copyright (c) 2021-now:");
-    slide.append(2, "Helaine Barreiros");
+    
+    slide.append(2, " Versão de Mikhael");
     slide.append(4, "JabberPoint execução de demonstração sem arquivos persistidos");
     slide.append(4, "exibição de apresentação com dados apenas em memória");
     slide.append(1, "Navegação:");
