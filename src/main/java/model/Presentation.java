@@ -1,5 +1,6 @@
 package model;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -100,6 +101,11 @@ public class Presentation implements SlideContainer {
   @Override
   public List<Slide> getShowList() {
     return showList;
+  }
+  
+  public void addTXTSlide(String fileName) throws IOException {
+    Slide slide = new TXTSlide(fileName);
+    append(slide);
   }
 
 }
